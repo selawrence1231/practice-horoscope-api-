@@ -3,7 +3,7 @@ document.querySelector('button').addEventListener('click', apiRequest)
 async function apiRequest(){
     const zodiacSign = document.querySelector('input').value
     try{
-        const response = await fetch(`localhost:8001/api/${zodiacSign}`)
+        const response = await fetch(`https://custom-api-horoscope-100devs.herokuapp.com/api/${zodiacSign}`)
         const data = await response.json()
 
         console.log(data)
